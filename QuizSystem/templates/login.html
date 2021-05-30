@@ -12,18 +12,16 @@
           <h1 class="mt-2">TestPress Quiz</h1>
           <hr class="mt-0 mb-4">
              <form method="post">
+                 {% csrf_token %}
                  <div class="form-outline mb-4">
-                     <input type="name" id="name" placeholder="Name" class="form-control"/>
+                     <input type="email" name="email" id="email" placeholder="Email" class="form-control"/>
                  </div>
                  <div class="form-outline mb-4">
-                     <input type="email" id="email" placeholder="Email" class="form-control"/>
-                 </div>
-                 <div class="form-outline mb-4">
-                     <input type="password" id="password" placeholder="Password" class="form-control"/>
+                     <input type="password" name="password" id="password" placeholder="Password" class="form-control"/>
                  </div>
                  <div class="form-outline mb-4 text-center">
                        <button type="submit" class="btn btn-success">Login</button>
-                       <p>Not a member? <a href="#!">Register</a></p>
+                       <p>Not a member? <a href="/register">Register</a></p>
                  </div>
              </form>
         </div>
